@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .site-container{
-    @apply max-w-2xl mx-auto px-6;
+    @apply max-w-2xl mx-auto px-4 sm:px-0;
 }
 .site-container nav a{
     @apply rounded p-2;

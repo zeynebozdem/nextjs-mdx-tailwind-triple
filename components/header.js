@@ -2,16 +2,16 @@ import Link from 'next/link'
 
 function Header() {
   return (
-    <header className="site-container pt-32 pb-32">
-      <nav className="flex justify-between text-xl text-gray-700 font-normal">
-        <div>
+    <header className="site-container py-20">
+      <nav className="flex flex-col space-y-2 overflow-y-auto sm:overflow-y-hidden sm:flex-row sm:space-y-0 p-5 sm:p-0 justify-between text-xl text-gray-700 font-normal">
+        <div className="">
           <Link href="/">
             <a className="font-bold hover:bg-gray-300 hover:text-gray-700">
               Home
             </a>
           </Link>
         </div>
-        <div className="space-x-4">
+        <div className="space-x-1 space-y-2 sm:space-x-2 sm:space-y-2">
           <Link href="/watercolor">
             <a className="hover:bg-green-100 hover:text-green-700">WaterColor</a>
           </Link>

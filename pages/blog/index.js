@@ -7,7 +7,7 @@ function BlogPage({ posts }) {
     <div className="site-container">
       {posts.map((post) => {
         return (
-          <article>
+          <article key={post.frontMatter.title}>
             <h2>
                 <a href={post.url}>{post.frontMatter.title}</a>
             </h2>
