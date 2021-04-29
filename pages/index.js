@@ -1,5 +1,8 @@
+import Header from '../components/header'
+
 function HomePage() {
-    return <div className="bg-red-50 font-semibold">Welcome to HomePage!</div>
+    return <div className="site-container">
+      Welcome to HomePage!</div>
   }
   
   export default HomePage

@@ -1,5 +1,5 @@
 function AboutPage() {
-    return <div>Welcome to AboutPage!</div>
+    return <div className="site-container">Welcome to AboutPage!</div>
   }
   
   export default AboutPage

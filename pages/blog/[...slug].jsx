@@ -1,3 +1,4 @@
+import { Link } from 'next/link'
 
 import { getMdxNode, getMdxPaths } from "next-mdx/server"
 
