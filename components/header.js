@@ -3,26 +3,30 @@ import Link from 'next/link'
 function Header() {
   return (
     <header className="site-container py-20">
-      <nav className="flex flex-col space-y-2 overflow-y-auto sm:overflow-y-hidden sm:flex-row sm:space-y-0 p-5 sm:p-0 justify-between text-xl text-gray-700 font-normal">
-        <div className="">
+      <nav className="flex flex-col space-y-2 overflow-y-auto sm:overflow-y-hidden sm:flex-row sm:space-y-0 p-2 sm:p-0 justify-between text-xl text-gray-700 font-normal">
+        <div className="rounded hover:bg-gray-100 hover:text-gray-700">
           <Link href="/">
-            <a className="font-bold hover:bg-gray-300 hover:text-gray-700">
-              Home
-            </a>
+            <a>Home</a>
           </Link>
         </div>
-        <div className="space-x-1 space-y-2 sm:space-x-2 sm:space-y-2">
-          <Link href="/watercolor">
-            <a className="hover:bg-green-100 hover:text-green-700">WaterColor</a>
-          </Link>
+        <div className="rounded hover:bg-blue-100 hover:text-blue-700">
           <Link href="/journey">
-            <a className="hover:bg-blue-100 hover:text-blue-700">Journey</a>
+            <a>Journey</a>
           </Link>
+        </div>
+        <div className="rounded hover:bg-purple-100 hover:text-purple-700">
           <Link href="/about">
-            <a className="hover:bg-purple-100 hover:text-purple-700">About</a>
+            <a>About</a>
           </Link>
+        </div>
+        <div className="rounded hover:bg-pink-100 hover:text-pink-700">
           <Link href="/blog">
-            <a className="hover:bg-pink-100 hover:text-pink-700">Blog</a>
+            <a>Blog</a>
+          </Link>
+        </div>
+        <div className="rounded hover:bg-green-100 hover:text-green-700">
+          <Link href="/watercolor">
+            <a>Water Color</a>
           </Link>
         </div>
       </nav>
