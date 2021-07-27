@@ -1,9 +1,28 @@
+import React, { Component } from 'react';
+import { useState } from 'react';
 import Link from 'next/link'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Header() {
-  return (
-    <header className="site-container py-20">
-      <nav className="flex flex-col space-y-2 overflow-y-auto sm:overflow-y-hidden sm:flex-row sm:space-y-0 p-2 sm:p-0 justify-between text-xl text-gray-700 font-normal">
+function Header(){
+  const [active, setActive] = useState(false);
+
+  const handleClick = () => {
+    setActive(!active);
+  };
+  return ( 
+    <header className="site-container">
+      <nav className="sm:hidden flex flex-row text-xl text-gray-700 font-normal">
+        <div onClick={handleClick}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+        <div className={active ? 'hidden' : 'rounded hover:bg-pink-100 hover:text-pink-700 px-2'}>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </div>
+      </nav>
+      <nav className={active ? 'flex sm:flex flex-col overflow-y-auto sm:overflow-y-hidden sm:flex-row sm:space-y-0 justify-between text-xl text-gray-700 font-normal transition duration-700 ease-linear' : 'hidden sm:flex flex-col overflow-y-auto sm:overflow-y-hidden sm:flex-row sm:space-y-0 justify-between text-xl text-gray-700 font-normal'}>
         <div className="rounded hover:bg-gray-100 hover:text-gray-700">
           <Link href="/">
             <a>Home</a>
@@ -30,7 +49,8 @@ function Header() {
           </Link>
         </div>
       </nav>
-    </header>
-  )
+  </header>
+   );
 }
+
 export default Header

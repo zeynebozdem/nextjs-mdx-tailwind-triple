@@ -6,5 +6,5 @@
     @apply max-w-2xl mx-auto px-4 sm:px-2;
 }
 .site-container nav a{
-    @apply rounded p-2;
+    @apply rounded sm:p-2;
 }
